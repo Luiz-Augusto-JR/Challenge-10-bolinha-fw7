@@ -134,10 +134,14 @@
 
     function gerandoUm() {
         balls.push(new Ball(x, y, Math.floor(Math.random() * 25 + 1)))
+        laser1.play() 
+        laser1.currentTime=0
     }
 
     function gerandoUmGrande() {
         balls.push(new Ball(x, y, 300))
+        grande.play()
+        grande.currentTime=0
     }
 
     function gerandoUmPequeno() {
@@ -172,21 +176,9 @@
         lalalala.play()
     }
 
-    function umaBolinha(){
-        gerandoUm() 
-        laser1.play() 
-        laser1.currentTime=0
-    }
-
     function play(){
         loop()
         music.play()
-    }
-
-    function buttonGrande(){
-        gerandoUmGrande() 
-        grande.play()
-        grande.currentTime=0
     }
 
     function reset(){
